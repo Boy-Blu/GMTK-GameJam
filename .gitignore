@@ -61,3 +61,4 @@ crashlytics-build.properties
 # Log files can be ignored. -> FMOD stuff
 fmod_editor.log
 ![Dd]esktop
+!GMTK-GameJam-FMOD/Build/Desktop
