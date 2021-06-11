@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+    totalSpriteSurfaceArea: 320000
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -3085053661432295534, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 601623144054556460, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 8666153195878230358, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 4633350270274512122, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 4341242654334979365, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 1903813881350671106, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -4373184736405950995, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 4158732434352698325, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 7700971350373784707, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 6482533309307412173, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -435046055405278703, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 4275265726231819746, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 7641892208429834689, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -800442207075965033, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 7649971556135936819, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 4870877652962855886, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 6735105382651259636, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 6433854208847190039, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 1492911798537794108, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 5048416880140299565, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 1338063624304658472, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -368596763120020550, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -737837024687671454, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 2509881989800874174, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -238930871357459764, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -6716143812497719498, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -2362380025853997434, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 1546552405686873150, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -968770383251345080, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 3038923913770714274, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: 8383685822998553962, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  - {fileID: -9055321195671008437, guid: 0b927523a0cfdc747a90b4fb87272ece, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - floor_6
+  - floor_7
+  - floor_4
+  - floor_5
+  - floor_2
+  - floor_3
+  - floor_0
+  - floor_1
+  - floor_8
+  - floor_9
+  - floor_28
+  - floor_29
+  - floor_24
+  - floor_25
+  - floor_26
+  - floor_27
+  - floor_20
+  - floor_21
+  - floor_22
+  - floor_23
+  - floor_15
+  - floor_14
+  - floor_17
+  - floor_16
+  - floor_11
+  - floor_10
+  - floor_13
+  - floor_12
+  - floor_19
+  - floor_18
+  - floor_31
+  - floor_30
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
