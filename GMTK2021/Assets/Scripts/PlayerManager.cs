@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
 
     // Button Debounce
     private bool justSwapped;
+        
+    // ------------------------------------------------------------
+    // Methods Start here
+    // ------------------------------------------------------------
 
     void Start(){
         _player = ReInput.players.GetPlayer (playerId);
@@ -28,18 +32,31 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         // button press
-        if(_player.GetButtonDown ("Switch") && InActivePlayer.CanConnect()){
+        if(_player.GetButtonDown (RewiredNames.SWITCH) && InActivePlayer.CanConnect()){
             justSwapped = true;
-            Debug.Log("Swapped");
-            PlayerController p1 = ActivePlayer;
-            p1.SetActive(false);
-            InActivePlayer.SetActive(true);
-            ActivePlayer = InActivePlayer;
-            InActivePlayer = p1;
-
-        }  else if (_player.GetButtonUp ("Switch")) {
+            StartCoroutine(SwapPlayers());
+        }  else if (_player.GetButtonUp (RewiredNames.SWITCH)) {
             justSwapped = false;
-
         }    
     }
+
+    /// <summary>
+    /// Swaps the Players
+    /// <summary>
+    IEnumerator  SwapPlayers(){
+        Debug.Log("Swapped");
+        PlayerController p1 = ActivePlayer;
+        p1.SetInactive();
+        // Add delay
+        
+        yield return new WaitForSeconds(0.2f);
+
+        InActivePlayer.SetActive();
+        ActivePlayer = InActivePlayer;
+        InActivePlayer = p1;
+    }
+
+    // ------------------------------------------------------------
+    // Getters + Setters
+    // ------------------------------------------------------------
 }
