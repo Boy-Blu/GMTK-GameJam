@@ -19,6 +19,9 @@ public class PlayerManager : MonoBehaviour
 
     // Button Debounce
     private bool justSwapped;
+
+    public delegate void PlayerSwap();
+    public static event PlayerSwap Notify;
         
     // ------------------------------------------------------------
     // Methods Start here
@@ -36,6 +39,7 @@ public class PlayerManager : MonoBehaviour
                 Physics2D.IgnoreCollision (collider.GetComponent<Collider2D> (), InActivePlayer.GetComponent<Collider2D> (), true);
             }
         }
+
     }
 
     // Update is called once per frame
@@ -56,7 +60,7 @@ public class PlayerManager : MonoBehaviour
     IEnumerator  SwapPlayers(){
         Debug.Log("Swapped");
         PlayerController p1 = ActivePlayer;
-        p1.SetInactive();
+        Notify();
         // Add delay
         foreach (GameObject collider in AirColliders) {
             if (collider.GetComponent<Collider2D> ()) {
@@ -64,12 +68,10 @@ public class PlayerManager : MonoBehaviour
                 Physics2D.IgnoreCollision (collider.GetComponent<Collider2D> (), InActivePlayer.GetComponent<Collider2D> (), false);
             }
         }
-        yield return new WaitForSeconds(0.2f);
-
-        InActivePlayer.SetActive();
-        
         ActivePlayer = InActivePlayer;
         InActivePlayer = p1;
+        yield return new WaitForSeconds(0.2f);
+
     }
 
     // ------------------------------------------------------------

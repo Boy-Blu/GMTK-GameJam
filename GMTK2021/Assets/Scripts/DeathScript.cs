@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public sealed class DeathScript : MonoBehaviour
 {
@@ -12,12 +13,26 @@ public sealed class DeathScript : MonoBehaviour
     private static bool hasTriggered = false;
 
     public GameObject DeathScreen;
+    public VisualEffect vfx;
+
+
+    void OnEnable()
+    {
+        GateScript.Notify += SetTriggered;
+    }
+
+    void OnDisable()
+    {
+        GateScript.Notify -= SetTriggered;
+    }
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == TagNames.PLAYER_TAG && !hasTriggered){
             Notify();   
             SetTriggered();
             DeathScreen.SetActive(true);
+
+            vfx.SendEvent("KillAll");
         }
     }
 

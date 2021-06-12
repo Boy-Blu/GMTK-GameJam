@@ -32,12 +32,14 @@ public class PlayerController : MonoBehaviour
     /// --------------------------------------------------------------------
     void OnEnable()
     {
-        DeathScript.Notify += SetInactive;
+        DeathScript.Notify += ApplyInactive;
+        PlayerManager.Notify += ChangeActive;
     }
 
     void OnDisable()
     {
-        DeathScript.Notify -= SetInactive;
+        DeathScript.Notify -= ApplyInactive;
+        PlayerManager.Notify -= ChangeActive;
     }
     #endregion
 
@@ -58,9 +60,9 @@ public class PlayerController : MonoBehaviour
     /// <param name="active"> If the Player starts Active or not </param>
     public void PlayerSetup(Player player, bool active){
         if (active) 
-            SetActive();
+            StartCoroutine(SetActive());
         else 
-            SetInactive();
+            StartCoroutine(SetInactive());
         _player = player;
     }
 
@@ -118,16 +120,30 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Change isActive State
     /// <summary>
-    public void SetActive(){
-        isActive = true;
+    IEnumerator SetActive(){
         _rb.gravityScale = 0.0f;
+        yield return new WaitForSeconds(0.2f);
+        isActive = true;
     }
 
     /// <summary>
     /// Change isActive State
     /// <summary>
-    public void SetInactive(){
+    IEnumerator SetInactive(){
         _rb.gravityScale = defaultGravityScale;
+        yield return new WaitForSeconds(0.2f);
         isActive = false;
+    }
+
+    private void ApplyInactive(){
+        StartCoroutine(SetInactive());
+    }
+
+    public void ChangeActive(){
+        if(isActive){
+            StartCoroutine(SetInactive());
+            return; 
+        }
+        StartCoroutine(SetActive());
     }
 }
