@@ -21,6 +21,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1680
   Exists: 1
+--- !u!114 &-6144576550096946852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/darkCollide
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/darkCollide
+  guid: b034cd29c522a845b2d9fec785cb1b42
+  Banks:
+  - {fileID: 5502599241328523400}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5619116350306634892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,11 +82,11 @@ MonoBehaviour:
   Path: Assets/GMTK-GameJam-FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637590211569760905
+  lastModified: 637591089658248619
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 748
+    Value: 862
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -82,13 +105,38 @@ MonoBehaviour:
   - {fileID: 5502599241328523400}
   EditorEvents:
   - {fileID: 6028064284414828026}
+  - {fileID: 91320944364779786}
+  - {fileID: -6144576550096946852}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5502599241328523400}
   StringsBanks:
   - {fileID: -2250785005700098981}
-  stringsBankWriteTime: 637590211569760905
+  stringsBankWriteTime: 637591089658248619
   cacheVersion: 8
+--- !u!114 &91320944364779786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/lightCollide
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/lightCollide
+  guid: 7fb5453015b7624ba2817cc4d8905f77
+  Banks:
+  - {fileID: 5502599241328523400}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1324973527319277886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,11 +173,11 @@ MonoBehaviour:
   Path: Assets/GMTK-GameJam-FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637590211569750899
+  lastModified: 637591089658228615
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1680
+    Value: 995392
   Exists: 1
 --- !u!114 &6028064284414828026
 MonoBehaviour:
@@ -147,10 +195,10 @@ MonoBehaviour:
   guid: 49e51f6d79c68d418f80d337d3b3d0b9
   Banks:
   - {fileID: 5502599241328523400}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 86000

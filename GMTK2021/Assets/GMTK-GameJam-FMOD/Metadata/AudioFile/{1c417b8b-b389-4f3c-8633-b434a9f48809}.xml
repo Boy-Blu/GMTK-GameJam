@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{1c417b8b-b389-4f3c-8633-b434a9f48809}">
+		<property name="assetPath">
+			<value>darkCollide1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.4382086167800454</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ba90c9c5-35aa-4f23-94be-4ae9271a05b9}</destination>
+		</relationship>
+	</object>
+</objects>
