@@ -3,6 +3,9 @@
 public class TagNames{
     public const string DEATH_TAG = "Death";
     public const string CLIMBABLE_TAG = "Climbable";
+    public const string AIR_TAG = "Air";
+    public const string PLAYER_TAG = "Player";
+
 }
 
 // Constants for rewired
