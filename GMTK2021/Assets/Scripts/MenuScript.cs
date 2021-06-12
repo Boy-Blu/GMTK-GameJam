@@ -7,10 +7,7 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
-
     public void Quit(){
         Application.Quit();
     }
-
-
 }

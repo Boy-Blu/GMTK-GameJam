@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Player Who Starts inactive")]
     [SerializeField] private PlayerController InActivePlayer; 
 
+    private GameObject[] AirColliders; 
+
     // Button Debounce
     private bool justSwapped;
         
@@ -26,6 +28,14 @@ public class PlayerManager : MonoBehaviour
         _player = ReInput.players.GetPlayer (playerId);
         ActivePlayer.PlayerSetup(_player,true);
         InActivePlayer.PlayerSetup(_player,false);
+
+        AirColliders = GameObject.FindGameObjectsWithTag (TagNames.AIR_TAG);
+
+        foreach (GameObject collider in AirColliders) {
+            if (collider.GetComponent<Collider2D> ()) {
+                Physics2D.IgnoreCollision (collider.GetComponent<Collider2D> (), InActivePlayer.GetComponent<Collider2D> (), true);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -48,10 +58,16 @@ public class PlayerManager : MonoBehaviour
         PlayerController p1 = ActivePlayer;
         p1.SetInactive();
         // Add delay
-        
+        foreach (GameObject collider in AirColliders) {
+            if (collider.GetComponent<Collider2D> ()) {
+                Physics2D.IgnoreCollision (collider.GetComponent<Collider2D> (), p1.GetComponent<Collider2D> (), true);
+                Physics2D.IgnoreCollision (collider.GetComponent<Collider2D> (), InActivePlayer.GetComponent<Collider2D> (), false);
+            }
+        }
         yield return new WaitForSeconds(0.2f);
 
         InActivePlayer.SetActive();
+        
         ActivePlayer = InActivePlayer;
         InActivePlayer = p1;
     }

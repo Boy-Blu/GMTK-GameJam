@@ -26,6 +26,21 @@ public class PlayerController : MonoBehaviour
 
     private bool onClimbable = false;
 
+    #region Observer Pattern
+    /// --------------------------------------------------------------------
+    /// Observer Pattern Stuff
+    /// --------------------------------------------------------------------
+    void OnEnable()
+    {
+        DeathScript.Notify += SetInactive;
+    }
+
+    void OnDisable()
+    {
+        DeathScript.Notify -= SetInactive;
+    }
+    #endregion
+
     // ---------------------------------------------------------------------
     //Methods Stuff
     // ---------------------------------------------------------------------
