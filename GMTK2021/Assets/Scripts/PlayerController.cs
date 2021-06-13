@@ -26,12 +26,17 @@ public class PlayerController : MonoBehaviour
 
     private bool onClimbable = false;
 
+    private Animator animator;
+
+    public bool isLight;
+
     #region Observer Pattern
     /// --------------------------------------------------------------------
     /// Observer Pattern Stuff
     /// --------------------------------------------------------------------
     void OnEnable()
     {
+        animator = GetComponent<Animator> ();
         DeathScript.Notify += ApplyInactive;
         PlayerManager.Notify += ChangeActive;
     }
@@ -50,6 +55,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator> ();
+        animator.SetBool("isLight", isLight);
+
         _rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -84,6 +92,9 @@ public class PlayerController : MonoBehaviour
             Vector2 movement = new Vector2();
             movement.x = _player.GetAxis (RewiredNames.MOVE_X);
             movement.y = _player.GetAxis (RewiredNames.MOVE_Y);
+
+
+            animator.SetBool("isMoving", !(Mathf.Abs(movement.x) <= 0.1 && Mathf.Abs(movement.y) <= 0.1) );
 
             _rb.MovePosition(_rb.position + movement*moveSpeed*del);
         }
@@ -121,18 +132,23 @@ public class PlayerController : MonoBehaviour
     /// Change isActive State
     /// <summary>
     IEnumerator SetActive(){
+        _rb.constraints =  RigidbodyConstraints2D.FreezeRotation;
         _rb.gravityScale = 0.0f;
+        _rb.SetRotation(0f);
         yield return new WaitForSeconds(0.2f);
         isActive = true;
+        animator.SetBool("isActive", isActive);
     }
 
     /// <summary>
     /// Change isActive State
     /// <summary>
     IEnumerator SetInactive(){
+        _rb.constraints =  RigidbodyConstraints2D.None;
         _rb.gravityScale = defaultGravityScale;
         yield return new WaitForSeconds(0.2f);
         isActive = false;
+        animator.SetBool("isActive", isActive);
     }
 
     private void ApplyInactive(){

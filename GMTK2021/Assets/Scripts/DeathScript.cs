@@ -18,6 +18,7 @@ public sealed class DeathScript : MonoBehaviour
 
     void OnEnable()
     {
+        hasTriggered = false;
         GateScript.Notify += SetTriggered;
     }
 

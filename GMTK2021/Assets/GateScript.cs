@@ -17,13 +17,17 @@ public class GateScript : MonoBehaviour
 
     public bool isLight;
     public bool canChange;
+    private Animator animator;
 
     void Start(){
+        animator = GetComponent<Animator> ();
         ApplyFx();
     }
 
     void OnEnable()
     {
+        animator = GetComponent<Animator> ();
+        hasTriggered = false;
         DeathScript.Notify += SetTriggered;
         PlayerManager.Notify += ChangeFX;
     }
@@ -69,6 +73,7 @@ public class GateScript : MonoBehaviour
     /// Apply Changes to the Portal
     ///</summary>
     void ApplyFx(){
+        animator.SetBool("isLight", isLight);
         vfx.SendEvent(isLight? "StartLight": "StartDark");
     }
 
