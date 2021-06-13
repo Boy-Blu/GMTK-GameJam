@@ -97,6 +97,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isMoving", !(Mathf.Abs(movement.x) <= 0.1 && Mathf.Abs(movement.y) <= 0.1) );
 
             _rb.MovePosition(_rb.position + movement*moveSpeed*del);
+
+            if(isLight) Debug.Log(_rb.mass);
         }
     }
 

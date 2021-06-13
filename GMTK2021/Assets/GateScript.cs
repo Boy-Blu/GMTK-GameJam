@@ -73,6 +73,7 @@ public class GateScript : MonoBehaviour
     /// Apply Changes to the Portal
     ///</summary>
     void ApplyFx(){
+        animator = GetComponent<Animator> ();
         animator.SetBool("isLight", isLight);
         vfx.SendEvent(isLight? "StartLight": "StartDark");
     }

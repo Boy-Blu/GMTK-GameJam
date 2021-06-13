@@ -94,3 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e9e46326ef90b4eb9435c728a09568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
+  _collider: {fileID: 0}
+  moveSpeed: 5
+  defaultGravityScale: 1
+  isLight: 0

@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8892733462942684104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/swapDark
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/swapDark
+  guid: de10bd61e2127342a4e7eb0c23241bea
+  Banks:
+  - {fileID: 5502599241328523400}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-6393575955331494826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,6 +58,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/sfx/darkCollide
   guid: b034cd29c522a845b2d9fec785cb1b42
+  Banks:
+  - {fileID: 5502599241328523400}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5690010299005247080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/swapLight
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/swapLight
+  guid: 0a03e371b822d747a772866aaf92c143
   Banks:
   - {fileID: 5502599241328523400}
   IsStream: 0
@@ -82,11 +128,11 @@ MonoBehaviour:
   Path: Assets/GMTK-GameJam-FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637591101188154490
+  lastModified: 637591371229470283
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 862
+    Value: 994
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -107,12 +153,15 @@ MonoBehaviour:
   - {fileID: 6028064284414828026}
   - {fileID: 91320944364779786}
   - {fileID: -6144576550096946852}
+  - {fileID: -5690010299005247080}
+  - {fileID: -8892733462942684104}
+  - {fileID: 8699768421244527770}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5502599241328523400}
   StringsBanks:
   - {fileID: -2250785005700098981}
-  stringsBankWriteTime: 637591101188154490
+  stringsBankWriteTime: 637591371229470283
   cacheVersion: 8
 --- !u!114 &91320944364779786
 MonoBehaviour:
@@ -173,11 +222,11 @@ MonoBehaviour:
   Path: Assets/GMTK-GameJam-FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637591101188144484
+  lastModified: 637591371229470283
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 995392
+    Value: 1058592
   Exists: 1
 --- !u!114 &6028064284414828026
 MonoBehaviour:
@@ -202,3 +251,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 86000
+--- !u!114 &8699768421244527770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx/die
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/die
+  guid: e77290739c39fe42a57cfdec062041f3
+  Banks:
+  - {fileID: 5502599241328523400}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
