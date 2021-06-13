@@ -13,4 +13,5 @@ public class RewiredNames{
     public const string SWITCH = "Switch";
     public const string MOVE_X = "MoveX";
     public const string MOVE_Y = "MoveY";
+    public const string PAUSE = "Pause";
 }

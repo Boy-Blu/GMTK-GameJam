@@ -35,7 +35,7 @@ public class GateScript : MonoBehaviour
     void OnDisable()
     {
         DeathScript.Notify -= SetTriggered;
-        PlayerManager.Notify += ChangeFX;
+        PlayerManager.Notify -= ChangeFX;
     }
 
     private static bool hasTriggered = false;
@@ -45,7 +45,7 @@ public class GateScript : MonoBehaviour
         if(col.gameObject.tag == TagNames.PLAYER_TAG && !hasTriggered){
             Notify();   
             SetTriggered();
-            StartCoroutine(loadNext());
+            LoadLevel();
             vfx.SendEvent("KillAll");
         }
     }
@@ -78,8 +78,8 @@ public class GateScript : MonoBehaviour
         vfx.SendEvent(isLight? "StartLight": "StartDark");
     }
 
-    IEnumerator loadNext(){
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(NextLevel);
+    void LoadLevel()
+    {
+        GameManager.Instance.StartLevelLoad(NextLevel);
     }
 }

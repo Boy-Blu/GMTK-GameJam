@@ -22,12 +22,21 @@ public class PlayerManager : MonoBehaviour
 
     public delegate void PlayerSwap();
     public static event PlayerSwap Notify;
-        
+
+    private FMOD.Studio.EventInstance _darkSwapAudio;
+    private FMOD.Studio.EventInstance _lightSwapAudio;
+    private FMOD.Studio.EventInstance _darkCollideAudio;
+    private FMOD.Studio.EventInstance _lightCollideAudio;
     // ------------------------------------------------------------
     // Methods Start here
     // ------------------------------------------------------------
 
     void Start(){
+        _darkSwapAudio = FMODUnity.RuntimeManager.CreateInstance("event:/sfx/swapDark");
+        _lightSwapAudio = FMODUnity.RuntimeManager.CreateInstance("event:/sfx/swapLight");
+        _darkCollideAudio = FMODUnity.RuntimeManager.CreateInstance("event:/sfx/darkCollide");
+        _lightCollideAudio = FMODUnity.RuntimeManager.CreateInstance("event:/sfx/lightCollide");
+
         _player = ReInput.players.GetPlayer (playerId);
         ActivePlayer.PlayerSetup(_player,true);
         InActivePlayer.PlayerSetup(_player,false);
@@ -45,13 +54,21 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_player.GetButtonDown(RewiredNames.PAUSE) && !GameManager.Instance.DeathScreenActive)
+        {
+            GameManager.Instance.TogglePauseMenu();
+        }
+
+        if (PauseMenu.Paused)
+            return;
+
         // button press
         if(_player.GetButtonDown (RewiredNames.SWITCH) && InActivePlayer.CanConnect()){
             justSwapped = true;
             StartCoroutine(SwapPlayers());
         }  else if (_player.GetButtonUp (RewiredNames.SWITCH)) {
             justSwapped = false;
-        }    
+        }
     }
 
     /// <summary>
@@ -59,7 +76,14 @@ public class PlayerManager : MonoBehaviour
     /// <summary>
     IEnumerator  SwapPlayers(){
         Debug.Log("Swapped");
+        
         PlayerController p1 = ActivePlayer;
+
+        if (p1.isLight)
+            _lightSwapAudio.start();
+        else
+            _darkSwapAudio.start();
+
         Notify();
         // Add delay
         foreach (GameObject collider in AirColliders) {
@@ -74,6 +98,13 @@ public class PlayerManager : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        _darkCollideAudio.release();
+        _darkSwapAudio.release();
+        _lightCollideAudio.release();
+        _lightSwapAudio.release();
+    }
     // ------------------------------------------------------------
     // Getters + Setters
     // ------------------------------------------------------------

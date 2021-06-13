@@ -15,6 +15,12 @@ public sealed class DeathScript : MonoBehaviour
     public GameObject DeathScreen;
     public VisualEffect vfx;
 
+    private FMOD.Studio.EventInstance _deathAudio;
+
+    private void Start()
+    {
+        _deathAudio = FMODUnity.RuntimeManager.CreateInstance("event:/sfx/die");
+    }
 
     void OnEnable()
     {
@@ -29,9 +35,11 @@ public sealed class DeathScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == TagNames.PLAYER_TAG && !hasTriggered){
+            _deathAudio.start();
             Notify();   
             SetTriggered();
-            DeathScreen.SetActive(true);
+            //DeathScreen.SetActive(true);
+            GameManager.Instance.TriggerDeathScreen();
 
             vfx.SendEvent("KillAll");
         }
@@ -42,5 +50,10 @@ public sealed class DeathScript : MonoBehaviour
     ///</summary>
     void SetTriggered(){
         hasTriggered = true;
+    }
+
+    private void OnDestroy()
+    {
+        _deathAudio.release();
     }
 }

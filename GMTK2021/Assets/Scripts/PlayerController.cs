@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Player Default Gravity (should be 1)")]
     [SerializeField] private float defaultGravityScale = 1f;
 
+    [SerializeField] private RigidbodyType2D BodyTypeWhenActive;
+    [SerializeField] private RigidbodyType2D BodyTypeWhenInactive;
+
+
     // Check if player is active
     private bool isActive = false;
 
@@ -86,7 +90,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate(){
         // Only do stuff when active
-        if(isActive){
+        if(isActive && !PauseMenu.Paused){
             // Move the Player
             float del = Time.deltaTime;
             Vector2 movement = new Vector2();
@@ -137,6 +141,7 @@ public class PlayerController : MonoBehaviour
         _rb.constraints =  RigidbodyConstraints2D.FreezeRotation;
         _rb.gravityScale = 0.0f;
         _rb.SetRotation(0f);
+        _rb.bodyType = BodyTypeWhenActive;
         yield return new WaitForSeconds(0.2f);
         isActive = true;
         animator.SetBool("isActive", isActive);
@@ -148,6 +153,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator SetInactive(){
         _rb.constraints =  RigidbodyConstraints2D.None;
         _rb.gravityScale = defaultGravityScale;
+        _rb.bodyType = BodyTypeWhenInactive;
         yield return new WaitForSeconds(0.2f);
         isActive = false;
         animator.SetBool("isActive", isActive);
