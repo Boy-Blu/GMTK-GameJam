@@ -2270,7 +2270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Programmers: \tOmri Cundangan\t\t\t\t\tAnthony Gruskovnjak\n\nSound Design:\tAryo
-    Nazareth\t    \n"
+    Nazareth\t    \n\nArt Design:  \t          Michael Fiumano"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2339,12 +2339,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 834302051}
-    characterCount: 87
+    characterCount: 127
     spriteCount: 0
-    spaceCount: 20
-    wordCount: 9
+    spaceCount: 36
+    wordCount: 13
     linkCount: 0
-    lineCount: 4
+    lineCount: 6
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -3341,7 +3341,7 @@ RectTransform:
   m_GameObject: {fileID: 1553365784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1689797440}
   - {fileID: 661440808}
@@ -4049,7 +4049,7 @@ RectTransform:
   m_GameObject: {fileID: 2082739617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 810402085}
   - {fileID: 1132573052}
