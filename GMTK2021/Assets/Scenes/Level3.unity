@@ -8020,7 +8020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828927752d270e34d98fdff08e6660ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: Level3
+  NextLevel: MainMenu
   vfx: {fileID: 624895815}
   isLight: 0
   canChange: 1

@@ -3819,8 +3819,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.5, y: -9.7}
-  m_SizeDelta: {x: 308.33716, y: 176.56213}
+  m_AnchoredPosition: {x: -1.5, y: 14.2}
+  m_SizeDelta: {x: 431.5, y: 176.56213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891364621
 MonoBehaviour:
@@ -3841,9 +3841,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '... About the Game -> fill this out
+  m_text: 'This is a story about Dark and Light. They are two mountain climbers set
+    out to climb a large mountain. The thing is, they are both lazy and only one
+    of them will be climbing at a given time, while the other dangles on the rope.
+    As you climb the mountain, you have to switch between Dark and Light.
 
-'
+    
+
+    Controls:
+
+    Arrow
+    keys/WASD/Left Joystick to move
+
+    Space/Right button to switch between Light
+    and Dark'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3888,7 +3899,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 313
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3912,12 +3923,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1891364621}
-    characterCount: 36
+    characterCount: 403
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 7
+    spaceCount: 73
+    wordCount: 76
     linkCount: 0
-    lineCount: 1
+    lineCount: 10
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
