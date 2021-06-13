@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1641de9459e09bf4db45fa34655cf226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialLevel: Level2
+  InitialLevel: Level1
 --- !u!1 &318522593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,7 +3993,7 @@ PrefabInstance:
     - target: {fileID: 7347798659356935278, guid: 3aff1c41a0c87a04782007aed01d572b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7347798659356935278, guid: 3aff1c41a0c87a04782007aed01d572b,
         type: 3}
@@ -4099,72 +4099,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082739617}
   m_CullTransparentMesh: 0
---- !u!1001 &9030043120938034003
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436082004332878832, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3624169224022071967, guid: 275afb205731b4443851c9133a0f8708,
-        type: 3}
-      propertyPath: m_Name
-      value: Rewired Input Manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 275afb205731b4443851c9133a0f8708, type: 3}
