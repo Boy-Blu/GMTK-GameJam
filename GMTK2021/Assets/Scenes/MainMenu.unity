@@ -530,7 +530,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1369283298}
+      objectReference: {fileID: 1553365784}
     - target: {fileID: 6971271965458501607, guid: ccd51466675005647b6b2a9f3539c31e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1659,7 +1659,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1287906743}
+      objectReference: {fileID: 2082739617}
     - target: {fileID: 6971271965458501607, guid: ccd51466675005647b6b2a9f3539c31e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName

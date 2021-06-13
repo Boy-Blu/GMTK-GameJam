@@ -128,7 +128,7 @@ MonoBehaviour:
   Path: Assets/GMTK-GameJam-FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637591402386840153
+  lastModified: 637591371229470283
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -161,7 +161,7 @@ MonoBehaviour:
   - {fileID: 5502599241328523400}
   StringsBanks:
   - {fileID: -2250785005700098981}
-  stringsBankWriteTime: 637591402386840153
+  stringsBankWriteTime: 637591371229470283
   cacheVersion: 8
 --- !u!114 &91320944364779786
 MonoBehaviour:
@@ -222,7 +222,7 @@ MonoBehaviour:
   Path: Assets/GMTK-GameJam-FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637591402384772294
+  lastModified: 637591371229470283
   LoadResult: 0
   FileSizes:
   - Name: Desktop
